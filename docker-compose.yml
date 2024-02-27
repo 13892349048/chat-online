@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  my-chat-app:
+    build: .
+    container_name: mytest
+    restart: always
+    ports: 
+      - "8080:8080"
+
+volumes:
+  chat-app:
+    external: true
+
+networks:
+  default:
+    driver: bridge
